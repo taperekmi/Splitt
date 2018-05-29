@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_15_152814) do
+ActiveRecord::Schema.define(version: 2018_05_22_151015) do
 
   create_table "bills", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.text "description"
-    t.string "bank_accounts"
+    t.string "bank_account"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "bill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_recipients_on_bill_id"
   end
 
 end

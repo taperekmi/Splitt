@@ -4,7 +4,7 @@ class CreateBills < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :price
       t.text :description
-      t.string :bank_accounts
+      t.string :bank_account
 
       t.timestamps
     end
