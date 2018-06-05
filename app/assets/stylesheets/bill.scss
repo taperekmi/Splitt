@@ -1,0 +1,49 @@
+.bill{
+	position: relative;
+}
+
+.bill__close{
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+
+.bill__header{
+	padding_bottom: 50px;
+	border: 0;
+	border_bottom: 1px solid var(--alto);
+	border_style: dashed;
+}
+
+.bill__segment{
+	margin-top: 55px;
+}
+
+.bill__text, 
+.bill__heading-medium,
+.bill__subtitle,
+.bill__heading-small
+.bill__title{
+	margin: 0;
+}
+
+.bill__flex-list{
+	display: flex;
+	align-items: center;
+}
+
+.bill__icon{
+	margin-right: 30px;
+}
+
+.bill__heading_medium{
+	margin_bottom: 30px;
+}
+
+.bill__subtitle{
+	margin_bottom: 30px;
+}
+
+.bill__item + bill__item{
+	margin-top:20 px;
+}

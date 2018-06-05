@@ -1,21 +1,18 @@
-Recipient.destroy_all	
+Recipient.destroy_all
+
 Bill.destroy_all
 
+bill1 = Bill.create(name: "Pizza", price: 100, bank_account: "1234 4321 0000 6789", description: "Example")
+bill2 = Bill.create(name: "Hamburger", price: 30, bank_account: "9876 0123 0000 6789", description: "Example")
+bill3 = Bill.create(name: "Kebab", price: 70, bank_account: "4321 0000 1234 6789", description: "Example")
 
+bill1.recipients.create(name: "Robert", email:"abc@def.com")
+bill1.recipients.create(name: "Tomasz", email:"tomw@test.pl")
 
+bill2.recipients.create(name: "Adam", email:"123@def.com")
+bill2.recipients.create(name: "Ewa", email:"ewa@123.com")
 
-bill1 = Bill.create(name: 'Pizza', price: 100, bank_account: '14141', description: 'Example')
-bill2 = Bill.create(name: 'Kebab', price: 150, bank_account: '14412', description: 'Example')
-bill3 = Bill.create(name: 'Hot-Dog', price: 300, bank_account: '144421', description: 'Example')
-
-
-
-
-
-bill1.recipients.create(name: 'Adam', email: '111@test.pl')
-bill1.recipients.create(name: 'Mirek', email: '112@test.pl')
-bill1.recipients.create(name: 'Maja', email: '113@test.pl')
-bill1.recipients.create(name: 'Ania', email: '114@test.pl')
-bill1.recipients.create(name: 'Alojzy', email: '115@test.pl')
+bill3.recipients.create(name: "Witek", email:"witek@test.pl")
+bill3.recipients.create(name: "Sebastian", email:"kaldi@test.pl")
 
 puts "Bills created"

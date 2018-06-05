@@ -1,6 +1,6 @@
 <article class="bill" id='<%= @bill.id %>'>
   <header class="bill__header">
-    <%= link_to '', bills_path, class: 'button button--close bill__close' %>
+    <%= link_to 'x', bills_path, class: 'button button--cancel bill__close' %>
 
     <h1 class="bill__title"><%= @bill.name %></h1>
 
@@ -35,11 +35,11 @@
     <h4 class="bill__heading-medium">Recipients</h4>
 
     <% if @bill.recipients.present? %>
-   <% prices = split_bill(@bill.price, @bill.recipients.count) %>
+      <% prices = split_bill(@bill.price, @bill.recipients.count) %>
       <ul>
-        <% @bill.recipients.each_with_index do |recipient, index:| %>
+        <% @bill.recipients.each_with_index do |recipient, index| %>
         <li class="bill__item">
-          <%= render 'recipient', recipient: recipient index:index prices:prices  %>
+          <%= render 'recipient', recipient: recipient, index: index, prices: prices %>
         </li>
         <% end %>
       </ul>
