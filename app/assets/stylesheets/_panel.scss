@@ -97,7 +97,7 @@
   height: 40px;
   display: inline-block;
   border-radius: 100%;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -111,7 +111,7 @@
 }
 
 .panel__icon:nth-child(n + 2) {
-  margin-right: -1.2em;
+  margin-right: -1em;  //tutaj zmieniam jak blisko sb są ikony recipientów
 }
 
 .panel__counter {
